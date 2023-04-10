@@ -416,7 +416,7 @@ def parse_pose_file(file):
         cam_params[id] = Camera(entry)
     return cam_params
 
-def get_camera_pose(path, path2, uv, views=40):
+def get_camera_pose(path, path2, uv, views=40, sf=1.2):
 
     config = {
         'superpoint': {
@@ -479,7 +479,6 @@ def get_camera_pose(path, path2, uv, views=40):
     pose2 = np.linalg.inv(pose2)
 
     # The sf will need to be tuned for different images
-    sf = 1.5
     pose2_superglue = pose2
     pose2[:3, -1] = pose2[:3, -1] / sf
 
