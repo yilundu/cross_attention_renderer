@@ -98,7 +98,7 @@ def multigpu_train(gpu, opt):
 
     torch.cuda.set_device(gpu)
 
-    val_dataset = RealEstate10kVis(img_root="/nobackup/projects/public/RealEstate10k/dataset_hi_res/test",
+    val_dataset = RealEstate10kVis(img_root="data_download/realestate/test",
                                  pose_root="poses/realestate/test.mat",
                                  num_ctxt_views=opt.views, num_query_views=1, augment=False)
 

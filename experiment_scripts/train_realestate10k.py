@@ -73,14 +73,14 @@ def multigpu_train(gpu, opt):
     torch.cuda.set_device(gpu)
 
     def create_dataloader_callback(sidelength, batch_size, query_sparsity):
-        train_dataset = RealEstate10k(img_root="/nobackup/projects/public/RealEstate10k/dataset_hi_res/train",
+        train_dataset = RealEstate10k(img_root="data_download/realestate/train",
                                      pose_root="poses/realestate/train.mat",
                                      num_ctxt_views=opt.views, num_query_views=1, query_sparsity=192,
                                      lpips=opt.lpips, augment=(not opt.no_data_aug))
         train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True,
                                   drop_last=True, num_workers=8, pin_memory=False, worker_init_fn=worker_init_fn)
 
-        val_dataset = RealEstate10k(img_root="/nobackup/projects/public/RealEstate10k/dataset_hi_res/test",
+        val_dataset = RealEstate10k(img_root="data_download/realestate/test",
                                       pose_root="poses/realestate/test.mat",
                                       num_ctxt_views=opt.views, num_query_views=1, augment=False)
         val_loader = DataLoader(val_dataset, batch_size=8, shuffle=True, drop_last=True, num_workers=4, pin_memory=False, worker_init_fn=worker_init_fn)

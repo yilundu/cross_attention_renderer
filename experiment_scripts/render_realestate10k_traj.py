@@ -190,7 +190,7 @@ def render(gpu, opt):
 
     torch.cuda.set_device(gpu)
 
-    test_dataset = RealEstate10k(img_root="/nobackup/projects/public/RealEstate10k/dataset_hi_res/test",
+    test_dataset = RealEstate10k(img_root="data_download/realestate/test",
                                  pose_root="poses/realestate/test.mat",
                                  num_ctxt_views=1, num_query_views=1, query_sparsity=256,
                                  )
@@ -212,7 +212,7 @@ def render(gpu, opt):
         all_scene = test_dataset.all_scenes[idx]
 
         try:
-            data = get_camera_pose(all_scene, "/nobackup/users/yilundu/my_repos/dataset/realestate_10k/RealEstate10K/test", test_dataset.uv, views=opt.views)
+            data = get_camera_pose(all_scene, "data_download/realestate/RealEstate10K/test", test_dataset.uv, views=opt.views)
         except:
             continue
 
