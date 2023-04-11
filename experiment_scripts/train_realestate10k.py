@@ -37,7 +37,7 @@ p.add_argument('--gpus', type=int, default=1)
 
 # General training options
 p.add_argument('--lr', type=float, default=5e-5)
-p.add_argument('--l2_coeff', type=float, default=0.1)
+p.add_argument('--l2_coeff', type=float, default=0.05)
 p.add_argument('--num_epochs', type=int, default=40001)
 p.add_argument('--lpips', action='store_true', default=False)
 p.add_argument('--depth', action='store_true', default=False)

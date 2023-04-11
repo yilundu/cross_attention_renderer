@@ -115,7 +115,7 @@ class LFLoss():
             lpips_loss = self.loss_fn_alex(gt_rgb, pred_rgb)
 
             # 0.2 for realestate
-            loss_dict['lpips_loss'] = 0.2 * lpips_loss
+            loss_dict['lpips_loss'] = 0.1 * lpips_loss
 
         if self.depth and (not val):
             depth_ray = model_out['depth_ray'][..., 0]
