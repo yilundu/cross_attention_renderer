@@ -9,7 +9,7 @@
 <br>
 MIT
 
-This is the official implementation of the paper "Learning to Render Novel Views from Wide-Baseline Stereo Pairs".
+This is a preliminary implementation of the paper "Learning to Render Novel Views from Wide-Baseline Stereo Pairs". The final version of the code will be released soon with the associated paper.
 
 https://user-images.githubusercontent.com/5572232/217013655-7cf89735-a683-4077-825f-33a6692d4f47.mp4
 
