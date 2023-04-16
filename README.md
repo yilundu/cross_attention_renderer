@@ -25,11 +25,11 @@ You can install the packages used in this codebase use the following command
 pip install -r requirements.txt
 ```
 You will need to download the Realestate10k and ACID dataset. We have attached a small subset of the RealEstate10K dataset as well as pose files which we may directly download using the dropbox link [here](https://www.dropbox.com/s/qo8b7odsms722kq/cvpr2023_wide_baseline_data.tar.gz?dl=0).
-Please extract the folder in the root directory.
+Please extract the folder in the root directory of the repo.
 
 To download the full datasets for Realestate10k and ACID, please follow the README [here](./data_download/README.md).
 
-You can also load a pretrained model on the RealEstate dataset [here](https://drive.google.com/file/d/1hxiyjWYR1UOOcuxTHZw7_B5VNqynmC5f/view). Please extract the model in the root directory.
+You can also load a pretrained model on the RealEstate dataset [here](https://drive.google.com/file/d/1hxiyjWYR1UOOcuxTHZw7_B5VNqynmC5f/view). Please extract the model in the root directory of the repo.
 
 ## High-Level structure
 The code is organized as follows:
