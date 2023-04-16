@@ -9,7 +9,7 @@
 <br>
 MIT
 
-This is a preliminary implementation of the paper "Learning to Render Novel Views from Wide-Baseline Stereo Pairs". The final version of the code will be released soon with the associated paper.
+This is a official implementation of the paper "Learning to Render Novel Views from Wide-Baseline Stereo Pairs". 
 
 https://user-images.githubusercontent.com/5572232/217013655-7cf89735-a683-4077-825f-33a6692d4f47.mp4
 
@@ -29,7 +29,7 @@ Please extract the folder in the root directory.
 
 To download the full datasets for Realestate10k and ACID, please follow the README [here](./data_download/README.md).
 
-You can also load a pretrained model on the RealEstate dataset [here](https://drive.google.com/file/d/1CrU1zHjU5KjHFPzcF2qvYDUs2u8ve-SR/view?usp=sharing). Please extract the model in the root directory.
+You can also load a pretrained model on the RealEstate dataset [here](https://drive.google.com/file/d/1hxiyjWYR1UOOcuxTHZw7_B5VNqynmC5f/view). Please extract the model in the root directory.
 
 ## High-Level structure
 The code is organized as follows:
