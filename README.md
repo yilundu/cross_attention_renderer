@@ -1,5 +1,5 @@
 # Learning to Render Novel Views from Wide-Baseline Stereo Pairs 
-### [Project Page](https://yilundu.github.io/wide_baseline/) | [Paper]() 
+### [Project Page](https://yilundu.github.io/wide_baseline/) | [Paper](https://arxiv.org/abs/2304.08463) 
 [![Explore in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PeL5oJ_eraLEdzTEVPLBwoM2pyv26WcU?usp=sharing)<br>
 
 [Yilun Du](https://yilundu.github.io/),
