@@ -60,12 +60,12 @@ followed by running the command below (adding lpips and depth loss later in trai
 python experiment_scripts/train_realestate10k.py --experiment_name realestate_lpips_depth --batch_size 4 --gpus 4 --lpips --depth --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
 
-You can visualize the results of the trained model using
+You can evaluate the results of the trained model using
 ```
-python experiment_scripts/vis_realestate10k_traj.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
+python experiment_scripts/eval_realestate10k.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
 
-You can also visualize the results of applying the trained model on videos images using the command
+You can also visualize the results of applying the trained model on videos using the command
 ```
 python experiment_scripts/render_realestate10k_traj.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
@@ -73,7 +73,7 @@ python experiment_scripts/render_realestate10k_traj.py --experiment_name vis_rea
 and on unposed images using
 
 ```
-python experiment_scripts/test_unposed_traj.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
+python experiment_scripts/render_unposed_traj.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
 
 ## Citation
