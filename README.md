@@ -11,11 +11,6 @@ MIT
 
 This is a official implementation of the paper "Learning to Render Novel Views from Wide-Baseline Stereo Pairs". 
 
-[![Rendering Results]          // Title
-(https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg)] // Thumbnail
-(https://yilundu.github.io/wide_baseline/img/Main_5.mp4 result)    // Video Link
-
-
 
 ## Google Colab
 If you want to experiment with our approach, we have written a [Colab](https://colab.research.google.com/drive/1PeL5oJ_eraLEdzTEVPLBwoM2pyv26WcU?usp=sharing).
