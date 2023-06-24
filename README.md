@@ -13,7 +13,7 @@ This is a official implementation of the paper "Learning to Render Novel Views f
 
 [![Rendering Results]          // Title
 (https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg)] // Thumbnail
-(https://yilundu.github.io/wide_baseline/img/Main_5.mp4)    // Video Link
+(https://yilundu.github.io/wide_baseline/img/Main_5.mp4 result)    // Video Link
 
 
 
