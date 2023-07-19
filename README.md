@@ -60,7 +60,7 @@ python experiment_scripts/train_realestate10k.py --experiment_name realestate_lp
 
 You can evaluate the results of the trained model using
 ```
-python experiment_scripts/eval_realestate10k.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
+python experiment_scripts/eval_realestate10k.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --views=2 --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
 
 You can also visualize the results of applying the trained model on videos using the command
