@@ -1,5 +1,5 @@
 # Learning to Render Novel Views from Wide-Baseline Stereo Pairs 
-### [Project Page](https://yilundu.github.io/wide_baseline/) | [Paper]() 
+### [Project Page](https://yilundu.github.io/wide_baseline/) | [Paper](https://arxiv.org/abs/2304.08463) 
 [![Explore in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PeL5oJ_eraLEdzTEVPLBwoM2pyv26WcU?usp=sharing)<br>
 
 [Yilun Du](https://yilundu.github.io/),
@@ -9,9 +9,7 @@
 <br>
 MIT
 
-This is the official implementation of the paper "Learning to Render Novel Views from Wide-Baseline Stereo Pairs".
-
-https://user-images.githubusercontent.com/5572232/217013655-7cf89735-a683-4077-825f-33a6692d4f47.mp4
+This is a official implementation of the paper "Learning to Render Novel Views from Wide-Baseline Stereo Pairs". 
 
 
 ## Google Colab
@@ -25,11 +23,11 @@ You can install the packages used in this codebase use the following command
 pip install -r requirements.txt
 ```
 You will need to download the Realestate10k and ACID dataset. We have attached a small subset of the RealEstate10K dataset as well as pose files which we may directly download using the dropbox link [here](https://www.dropbox.com/s/qo8b7odsms722kq/cvpr2023_wide_baseline_data.tar.gz?dl=0).
-Please extract the folder in the root directory.
+Please extract the folder in the root directory of the repo.
 
 To download the full datasets for Realestate10k and ACID, please follow the README [here](./data_download/README.md).
 
-You can also load a pretrained model on the RealEstate dataset [here](https://drive.google.com/file/d/1CrU1zHjU5KjHFPzcF2qvYDUs2u8ve-SR/view?usp=sharing). Please extract the model in the root directory.
+You can also load a pretrained model on the RealEstate dataset [here](https://drive.google.com/file/d/1hxiyjWYR1UOOcuxTHZw7_B5VNqynmC5f/view). Please extract the model in the root directory of the repo.
 
 ## High-Level structure
 The code is organized as follows:
@@ -60,20 +58,20 @@ followed by running the command below (adding lpips and depth loss later in trai
 python experiment_scripts/train_realestate10k.py --experiment_name realestate_lpips_depth --batch_size 4 --gpus 4 --lpips --depth --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
 
-You can visualize the results of the trained model using
+You can evaluate the results of the trained model using
 ```
-python experiment_scripts/vis_realestate10k_traj.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
+python experiment_scripts/eval_realestate10k.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --views=2 --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
 
-You can also visualize the results of applying the trained model on videos images using the command
+You can also visualize the results of applying the trained model on videos using the command
 ```
-python experiment_scripts/render_realestate10k_traj.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
+python experiment_scripts/render_realestate10k_traj.py --experiment_name vis_realestate --batch_size 12 --views 2 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
 
 and on unposed images using
 
 ```
-python experiment_scripts/test_unposed_traj.py --experiment_name vis_realestate --batch_size 12 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
+python experiment_scripts/render_unposed_traj.py --experiment_name vis_realestate --batch_size 12 --views 2 --gpus 1 --checkpoint_path logs/realestate/checkpoints/model_current.pth
 ```
 
 ## Citation
