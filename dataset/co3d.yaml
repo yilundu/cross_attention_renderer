@@ -1,0 +1,23 @@
+train_dataset:
+  type: 'co3dv2'
+
+  stage: 'train'
+  path: '/nobackup/projects/public/facebook-co3dv2' # /path/to/co3d
+  category: 'all_nerformer'
+  image_size: [256, 256]
+  num_input_views: 3
+  num_query_views: 1
+  mask_images: True
+  query_input_views: False
+
+val_dataset:
+  type: 'co3dv2'
+
+  stage: "val"
+  path: '/nobackup/projects/public/facebook-co3dv2'
+  category: 'all_nerformer'
+  image_size: [256, 256]
+  num_input_views: 3
+  num_query_views: 1
+  mask_images: True
+  query_input_views: False
