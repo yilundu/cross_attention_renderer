@@ -75,7 +75,7 @@ python experiment_scripts/render_unposed_traj.py --experiment_name vis_realestat
 ```
 
 ## Citation
-If you find our work useful in your research, consider cite:
+If you find our work useful in your research, you can cite the following article:
 ```
 @article{du2023widerender,
           title={Learning to Render Novel Views from
