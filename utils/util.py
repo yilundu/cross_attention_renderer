@@ -6,6 +6,7 @@ import numpy as np
 import torch
 from glob import glob
 import collections
+import collections.abc
 from copy import deepcopy
 
 
@@ -115,7 +116,7 @@ def print_network(net):
 
 
 def add_batch_dim_to_dict(ob):
-    if isinstance(ob, collections.Mapping):
+    if isinstance(ob, collections.abc.Mapping):
         return {k: add_batch_dim_to_dict(v) for k, v in ob.items()}
     elif isinstance(ob, tuple):
         return tuple(add_batch_dim_to_dict(k) for k in ob)
@@ -192,7 +193,7 @@ def get_mgrid(sidelen, dim=2, flatten=False):
 
 
 def dict_to_gpu(ob):
-    if isinstance(ob, collections.Mapping):
+    if isinstance(ob, collections.abc.Mapping):
         return {k: dict_to_gpu(v) for k, v in ob.items()}
     elif isinstance(ob, tuple):
         return tuple(dict_to_gpu(k) for k in ob)
@@ -205,7 +206,7 @@ def dict_to_gpu(ob):
             return ob
 
 def dict_to_gpu_expand(ob):
-    if isinstance(ob, collections.Mapping):
+    if isinstance(ob, collections.abc.Mapping):
         return {k: dict_to_gpu_expand(v) for k, v in ob.items()}
     elif isinstance(ob, tuple):
         return tuple(dict_to_gpu_expand(k) for k in ob)

@@ -6,7 +6,7 @@ import time
 import warnings
 from collections import defaultdict
 from itertools import islice
-from typing import Any, List, Mapping, Optional, Sequence, Tuple, Union
+from typing import Any, List, Optional, Sequence, Tuple, Union
 
 import numpy as np
 import torch
@@ -59,7 +59,7 @@ ALL_CATEGORY_MAPPING = {
 
 
 @dataclass
-class FrameData(Mapping[str, Any]):
+class FrameData():
     """
     A type of the elements returned by indexing the dataset object.
     It can represent both individual frames and batches of thereof;
